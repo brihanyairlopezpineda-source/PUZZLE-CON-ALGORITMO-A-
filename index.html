@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>15-Puzzle - Proyecto</title>
+    <!-- Enlace directo al archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Solucionador de 15-Puzzle</h1>
+    
+    <div class="controles">
+        <label>Meta deseada:</label>
+        <select id="selector-meta" onchange="cambiarMeta()">
+            <option value="horizontal">Horizontal</option>
+            <option value="vertical">Vertical</option>
+            <option value="serpiente">Serpiente</option>
+            <option value="espiral">Espiral o Caracol</option>
+            <option value="diagonal">Diagonal</option>
+            <option value="retroceso">Retroceso Horizontal</option>
+        </select>
+        <button onclick="mezclar()">Mezclar</button>
+        <button onclick="iniciarResolucion()">Resolver Automáticamente</button>
+    </div>
+
+    <div class="contenedor-principal">
+        <div id="tablero"></div>
+        
+        <div class="panel-pasos">
+            <h3>Pasos: <span id="contador-pasos">0</span></h3>
+            <ul id="lista-pasos"></ul>
+        </div>
+    </div>
+
+    <!-- Enlace directo al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
